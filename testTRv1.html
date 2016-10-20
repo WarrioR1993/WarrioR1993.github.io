@@ -1,0 +1,300 @@
+<DOCTYPE html>
+<html>
+
+<head>
+
+<title> Тест Технологія Token Ring. Варіант 1</title>
+
+<meta name="keyword" content="div verstka">
+<meta name="description" content="My first div verstka">
+<meta charset="UTF-8">
+<link href="div-verstka-CSS.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"> </script>
+
+</head>
+
+<body>
+
+<div class="Body">
+
+<div class="Main-Frame">
+
+<div class="Header">
+<p>Тест Технологія Token Ring. Варіант 1</p>
+</div>
+
+<div class="Left-menu">
+<a class="menu" href="Start.html"> #Лекції# </a><br><br>
+<a class="menu" href="allTests.html"> #Тести# </a><br><br>
+<a class="menu" href="labWork.html"> #Лабараторні# </a><br>
+</div>
+
+<div class="Work-Area">
+<b>1. Вибрати найбільш влучне визначення:</b><br>
+	<br>
+   <input type="radio" name="question1" value="1" > a. Token – це кадр спеціального формату<br>
+   <input type="radio" name="question1" value="2" > b. Token – це пакет спеціального формату мереж  Token Ring<br>
+   <input type="radio" name="question1" value="3" > c. Token – це кадр спеціального формату, що закриває  доступ до середовище передачі даних<br>
+   <input type="radio" name="question1" value="4" > d. Token – це сегмент спеціального формату, що да є доступ до середовище передачі даних<br>
+   <input type="radio" name="question1" value="5" > e. Token – це кадр спеціального формату, що дозволяє  доступ до середовище передачі даних<br>
+   
+    <button onclick="quest1()" class="button question1">Відповісти</button><br>
+	<script type="text/javascript">
+		var n=0;
+		var q1=0;
+		function quest1() {
+		var rad=document.getElementsByName('question1');
+			if (rad[4].checked) 
+				{
+					q1=1;
+					$('.button.question1').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+			else
+				{
+					q1=1;
+					$('.button.question1').attr('disabled', 'disabled');
+					alert('Відповід не правильна'+n+'%');
+				}
+				
+		}
+		
+	</script>
+	
+	<div class= "squa"> 
+	<div class="bar">
+	</div>
+	</div>
+   <br>
+<p><b>2. Обрати 4 відповіді, що стосуються мереж FDDI:</b></p><br>
+<br>
+	<input type="checkbox" name="question2" id="option1" value="0"> a. Має первинне і вторине кільце<br>
+   <input type="checkbox" name="question2" id="option2" value="1"> b. Підтримує режим згортання – Wrap<br>
+   <input type="checkbox" name="question2" id="option3" value="2"> c. час утримання маркера в мережі FDDI не є постійною величиною для асинхронного трафіка<br>
+   <input type="checkbox" name="question2" id="option4" value="3"> d. час утримання маркера в мережі FDDI складає 10 мс<br>
+   <input type="checkbox" name="question2" id="option5" value="4"> e. для синхронного трафіка час утримання маркера є  фіксованою величиною<br>
+   <input type="checkbox" name="question2" id="option6" value="5"> f. час утримання маркера в мережі FDDI складає 3,4 мс<br>
+   <input type="checkbox" name="question2" id="option7" value="6"> g. використовує метод пізнього вивільнення маркеру<br>
+    <button onclick="quest2()" class="button question2">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest2() {
+		var rad=document.getElementsByName('question2');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==4)
+				{
+					if (rad[0].checked && rad[1].checked && rad[2].checked && rad[4].checked) 
+					{
+						$('.button.question2').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[0].checked || rad[1].checked || rad[2].checked || rad[4].checked) 
+					{
+						if(rad[0].checked)
+						{
+							n=n+5;
+						}
+						if(rad[1].checked)
+						{
+							n=n+5;
+						}
+						if(rad[2].checked)
+						{
+							n=n+5;
+						}
+						if(rad[4].checked)
+						{
+							n=n+5;
+						}
+						$('.button.question2').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question2').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+ <p><b>3. Активний монітор вибирається (2 відповіді):</b></p><br>
+	<br>
+	<input type="checkbox" name="question3" id="option1" value="0"> a. під час ініціалізації кільця<br>
+   <input type="checkbox" name="question3" id="option2" value="1"> b. під час завнтаження операційної системи<br>
+   <input type="checkbox" name="question3" id="option3" value="2"> c. це станція з максимальним значенням МАС-адреси<br>
+   <input type="checkbox" name="question3" id="option4" value="3"> d. це станція з мінімальним значенням МАС-адреси<br>
+    <button onclick="quest3()" class="button question3">Відповісти</button><br>
+	<br>
+	<div class= "squa"> 
+	<div class="bar">
+	<script type="text/javascript">
+		function quest3() {
+		var rad=document.getElementsByName('question3');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[0].checked && rad[2].checked) 
+					{
+						$('.button.question3').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[0].checked || rad[2].checked) 
+					{
+						if(rad[0].checked)
+						{
+							n=n+10;
+						}
+						if(rad[2].checked)
+						{
+							n=n+10;
+						}
+						$('.button.question3').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question3').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+   <br>
+   <p><b>4. У стандарті FDDI допускаються два види приєднання станцій до мережі(2 відповіді):</b></p><br>
+   <br>
+	<input type="checkbox" name="question4" id="option1" value="0"> a. Double Attachment<br>
+   <input type="checkbox" name="question4" id="option2" value="1"> b. Dual Connect<br>
+   <input type="checkbox" name="question4" id="option3" value="2"> c. Dual Attachment<br>
+   <input type="checkbox" name="question4" id="option4" value="3"> d. Single Connect<br>
+   <input type="checkbox" name="question4" id="option4" value="4"> e. Second Attachment<br>
+   <input type="checkbox" name="question4" id="option4" value="5"> f. Single Attachment<br>
+    <button onclick="quest4()" class="button question4">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest4() {
+		var rad=document.getElementsByName('question4');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[2].checked && rad[5].checked) 
+					{
+						$('.button.question4').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[2].checked || rad[5].checked) 
+					{
+						if(rad[5].checked)
+						{
+							n=n+10;
+						}
+						if(rad[2].checked)
+						{
+							n=n+10;
+						}
+						$('.button.question4').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question4').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<b>5. Щоб мережа могла знайти відмову активного монітора, останній у працездатному стані генерує спеціальний кадр своєї присутності. Це відбувається:</b><br>
+	<br>
+   <input type="radio" name="question5" value="1" > a. Кожні 4 секунди<br>
+   <input type="radio" name="question5" value="2" > b. Кожні 7 секунд<br>
+   <input type="radio" name="question5" value="3" > c. Кожні 3 секунд<br>
+   <input type="radio" name="question5" value="4" > d. Кожні 10 мс<br>
+   
+    <button onclick="quest5()" class="button question5">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest5() {
+		$('quest5').attr('enabled');
+		var rad=document.getElementsByName('question5');
+				if (rad[2].checked) 
+				{
+					$('.button.question5').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('.button.question5').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script></div></div>
+	<br> <br>
+	<button onclick="quest6()" class="button result">Результат</button><br>
+	<script>
+		function quest6() 
+		{
+			alert('Результат тест Технологія Token Ring 1 варіант= '+n+' %')
+		}
+	</script>
+	<br>
+</div>
+
+<div class="Footer">
+Copiright &copy; <a href="div-verstka.html">Головна сторінка</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
