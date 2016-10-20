@@ -1,0 +1,276 @@
+<DOCTYPE html>
+<html>
+
+<head>
+
+<title> Концепція побудови захищених віртуальних приватних мереж – VPN.Вар.1 </title>
+
+<meta name="keyword" content="div verstka">
+<meta name="description" content="My first div verstka">
+<meta charset="UTF-8">
+<link href="div-verstka-CSS.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"> </script>
+
+</head>
+
+<body>
+
+<div class="Body">
+
+<div class="Main-Frame">
+
+<div class="Header">
+<p>Концепція побудови захищених віртуальних приватних мереж – VPN. Варіант 1 </p>
+</div>
+
+<div class="Left-menu">
+<a class="menu" href="Start.html"> #Лекції# </a><br><br>
+<a class="menu" href="allTests.html"> #Тести# </a><br><br>
+<a class="menu" href="labWork.html"> #Лабараторні# </a><br>
+</div>
+
+<div class="Work-Area">
+<b>1.	Місце мереж VPN у варіантах побудови загальнодоступних мереж:</b><br>
+	<br>
+   <input type="radio" name="question1" value="1" > a.	Приватні, інтернет<br>
+   <input type="radio" name="question1" value="2" > b.	Публічні, інтернет<br>
+   <input type="radio" name="question1" value="3" > c.	Приватні, виділені<br>
+   <input type="radio" name="question1" value="4" > d.	Приватні, комутовані<br>
+    <button onclick="quest1()" class="button">Відповісти</button><br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest1() {
+		$('quest1').attr('enabled');
+		var rad=document.getElementsByName('question1');
+				if (rad[1].checked) 
+				{
+					alert('Відповідь правильна');
+					$('quest1').removeAttr('enabled');
+					$('quest1').attr('disabled', 'disabled');
+				}
+				else
+				{
+					alert('Відповід не правильна');
+					$('quest1').removeAttr('enabled');
+					$('quest1').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script>
+	<p class="procent">0%</p></div></div>
+   <br>
+<p><b>2.	Протокол IPSec (2 відповіді):</b></p><br>
+	<input type="checkbox" name="question2" id="option1" value="1"> a.	захищає від зміни даних при пересилці<br>
+   <input type="checkbox" name="question2" id="option2" value="2"> b.	потребує додаткових засобів ідентифікації<br>
+   <input type="checkbox" name="question2" id="option3" value="3"> c.	захищає від вірусів та шкідливих програм<br>
+   <input type="checkbox" name="question2" id="option4" value="4"> d.	захищає від зміни даних при переписці<br>
+   <input type="checkbox" name="question2" id="option5" value="5"> e.	потребує додаткових засобів авторизації<br>
+   <input type="checkbox" name="question2" id="option6" value="6"> f.	перехоплення, перегляду і копіювання даних<br>
+    <button onclick="quest2()" class="button">Відповісти</button><br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest2() {
+		var rad=document.getElementsByName('question2');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[0].checked && rad[5].checked) 
+					{
+						alert('Відповідь правильна');
+					}
+					else if(rad[0].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else if(rad[5].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else
+					{
+						alert('Відповід не правильна');
+					}
+				}
+				
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<p><b>3.	Виділені лінії (2 відповіді):</b></p><br>
+	<input type="checkbox" name="question3" id="option1" value="0"> a.	дорожчі за звичайні загальнодоступні<br>
+   <input type="checkbox" name="question3" id="option2" value="1"> b.	приймають запити користувачів <br>
+   <input type="checkbox" name="question3" id="option3" value="2"> c.	кожна точка вимагає окремого порта свіча<br>
+   <input type="checkbox" name="question3" id="option4" value="3"> d.	ціна виділених ліній росте зі збільшенням абонентів<br>
+   <input type="checkbox" name="question3" id="option5" value="4"> e.	не залежить від провайдера<br>
+    <button onclick="quest3()" class="button">Відповісти</button><br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest3() {
+		var rad=document.getElementsByName('question3');
+		var counter=0;
+				for(var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[0].checked && rad[3].checked) 
+					{
+						alert('Відповідь правильна');
+					}
+					else if(rad[0].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else if(rad[3].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else
+					{
+						alert('Відповід не правильна');
+					}
+				}
+				
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<p><b>4.	VPN – це (3 відповіді):</b></p><br>
+	<input type="checkbox" name="question4" id="option1" value="0">a.	захищений зв’язок між приватними локальними мережами<br>
+   <input type="checkbox" name="question4" id="option2" value="1"> b.	захищений зв’язок між приватними локальними мережами засобами публічної мережі <br>
+   <input type="checkbox" name="question4" id="option3" value="2"> c.	зв’язок між локальними мережами засобами інтернет<br>
+   <input type="checkbox" name="question4" id="option4" value="3"> d.	не залежить від провайдера<br>
+   <input type="checkbox" name="question4" id="option5" value="4"> e.	використовує віртуальні канали<br>
+   <input type="checkbox" name="question4" id="option5" value="5"> f.	використовує протокол VPN<br>   
+   <input type="checkbox" name="question4" id="option5" value="6"> g.	використовує VPN тунелі<br>  
+   <input type="checkbox" name="question4" id="option5" value="7"> h.	використовується разом з виділеними лініями<br>
+    <button onclick="quest4()" class="button">Відповісти</button><br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest4() {
+		var rad=document.getElementsByName('question4');
+		var counter=0;
+				for(var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==3)
+				{
+					if (rad[1].checked && rad[4].checked && rad[6].checked) 
+					{
+						alert('Відповідь правильна');
+					}
+					else if(rad[1].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else if(rad[4].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else if(rad[6].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else
+					{
+						alert('Відповід не правильна');
+					}
+				}
+				
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+ <p><b>5.	Тунелювання -  (2 відповіді):</b></p><br>
+	<input type="checkbox" name="question5" id="option1" value="0">a.	дані передаються через загальнодоступну мережу як по звичному двоточковому з'єднанню<br>
+   <input type="checkbox" name="question5" id="option2" value="1"> b.	може запобігти можливому конфлікту ІР адрес у глобальній мережі<br>
+   <input type="checkbox" name="question5" id="option3" value="2"> c.	фрейми даних передаються через інтернет як по звичному двоточковому з'єднанню<br>
+   <input type="checkbox" name="question5" id="option4" value="3"> d.	сегменти даних передаються через загальнодоступну мережу як по звичному двоточковому з'єднанню<br>
+   <input type="checkbox" name="question5" id="option5" value="4"> e.	може запобігти можливому конфлікту ІР адрес між двома локальними мережами`<br>
+   <input type="checkbox" name="question5" id="option5" value="5"> f.	може запобігти можливому конфлікту МАС адрес між двома локальними мережами<br>   
+   <input type="checkbox" name="question5" id="option5" value="6"> g.	пакети даних передаються через інтернет як по звичному двоточковому з'єднанню<br>
+    <button onclick="quest5()" class="button">Відповісти</button><br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest5() {
+		var rad=document.getElementsByName('question5');
+		var counter=0;
+				for(var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[4].checked && rad[6].checked) 
+					{
+						alert('Відповідь правильна');
+					}
+					else if(rad[4].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else if(rad[6].checked)
+					{
+						alert('Відповідь правильна частково');
+					}
+					else
+					{
+						alert('Відповід не правильна');
+					}
+				}
+				
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+</div>
+
+<div class="Footer">
+Copiright &copy; <a href="div-verstka.html">Головна сторінка</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
