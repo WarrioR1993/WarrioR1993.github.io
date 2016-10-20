@@ -1,0 +1,264 @@
+<DOCTYPE html>
+<html>
+
+<head>
+
+<title> Тест Комунікації в мережах. Варіант 2 </title>
+
+<meta name="keyword" content="div verstka">
+<meta name="description" content="My first div verstka">
+<meta charset="UTF-8">
+<link href="div-verstka-CSS.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"> </script>
+
+</head>
+
+<body>
+
+<div class="Body">
+
+<div class="Main-Frame">
+
+<div class="Header">
+<p>Тест Комунікації в мережах. Варіант 2 </p>
+</div>
+
+<div class="Left-menu">
+<a class="menu" href="Start.html"> #Лекції# </a><br><br>
+<a class="menu" href="allTests.html"> #Тести# </a><br><br>
+<a class="menu" href="labWork.html"> #Лабараторні# </a><br>
+</div>
+
+<div class="Work-Area">
+<b>1.	Яка першочергова функція кінцевика, що додається під час інкапсуляції 2 рівнем моделі відкритих систем?</b><br>
+	<br>
+   <input type="radio" name="question1" value="0" > a.	Виконує виявлення помилок<br>
+   <input type="radio" name="question1" value="1" > b.	Гарантує впорядковану доставку даних<br>
+   <input type="radio" name="question1" value="2" > c.	Забезпечує доставку даних до пристрою призначення<br>
+   <input type="radio" name="question1" value="3" > d.	Ідентифікує пристрій у локальній мережі<br>
+   <input type="radio" name="question1" value="4" > e.	Допомагає проміжковим пристроям у прокладенні та виборі маршруту<br>
+   <br>
+    <button onclick="quest1()" class="button question1">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+	var n=0;
+		function quest1() {
+		$('quest1').attr('enabled');
+		var rad=document.getElementsByName('question1');
+				if (rad[0].checked) 
+				{
+					$('.button.question1').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('.button.question1').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script>
+	</div></div>
+   <br>
+   <b>2.	Які два рівні моделі відкритих систем OSI мають такі самі функції, як і в протокольній моделі TCP/IP?(2 відповіді):</b><br>
+   <input type="checkbox" name="question2" id="option1" value="1"> a.	Network<br>
+   <input type="checkbox" name="question2" id="option2" value="2"> b.	Transport<br>
+   <input type="checkbox" name="question2" id="option3" value="3"> c.	Physical<br>
+   <input type="checkbox" name="question2" id="option4" value="4"> d.	Data Link<br>
+   <input type="checkbox" name="question2" id="option5" value="5"> e.	Session<br>
+   <br>
+    <button onclick="quest2()" class="button question2">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest2() {
+		var rad=document.getElementsByName('question2');
+		var counter=0;
+		
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[0].checked && rad[2].checked) 
+					{
+						$('.button.question2').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[0].checked || rad[2].checked) 
+					{
+						if(rad[0].checked)
+						{
+							n=n+10;
+						}
+						if(rad[2].checked)
+						{
+							n=n+10;
+						}
+						$('.button.question2').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question2').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<b>3.	Що таке PDU?</b><br>
+	<br>
+   <input type="radio" name="question3" value="0" > a.	Перехват фрейму під час передачі даних<br>
+   <input type="radio" name="question3" value="1" > b.	Перезбирання даних на стороні отримувача<br>
+   <input type="radio" name="question3" value="2" > c.	Передача пакетів, що були загублені під час комунікації<br>
+   <input type="radio" name="question3" value="3" > d.	Специфічна інкапсуляція на кожному з рівнів<br>
+   <br>
+    <button onclick="quest3()" class="button question3">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest3() {
+		$('quest1').attr('enabled');
+		var rad=document.getElementsByName('question3');
+				if (rad[3].checked) 
+				{
+					$('.button.question3').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('.button.question3').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script></div></div>
+   <br>
+   <b>4.	Що коректно відображає кінцеві пристрої в мережі?</b><br>
+	<br>
+   <input type="radio" name="question4" value="0" > a.	Управляють потоками даних<br>
+   <input type="radio" name="question4" value="1" > b.	Продукують потік даних<br>
+   <input type="radio" name="question4" value="2" > c.	Передають та відновлюють сигнали <br>
+   <input type="radio" name="question4" value="3" > d.	Визначають маршрути даних<br>
+   <br>
+    <button onclick="quest4()" class="button question4">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest4() {
+		$('quest1').attr('enabled');
+		var rad=document.getElementsByName('question4');
+				if (rad[1].checked) 
+				{
+					$('.button.question4').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('.button.question4').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script></div></div>
+   <br>
+   <b>5.	Погляньте на рисунок. Що коректно ідентифікує типи мереж в наведених сегментах (оберіть 3 відповіді)?</b><br><br>
+   <img src="img\TKMV2Q5.png" alt="Quest" height="200"><br><br>
+   <input type="checkbox" name="question5" id="option1" value="0"> a.	Network A -- WAN<br>
+   <input type="checkbox" name="question5" id="option2" value="1"> b.	Network B -- WAN<br>
+   <input type="checkbox" name="question5" id="option3" value="2"> c.	Network C -- LAN<br>
+   <input type="checkbox" name="question5" id="option4" value="3"> d.	Network B -- MAN<br>
+   <input type="checkbox" name="question5" id="option5" value="4"> e.	Network C -- WAN<br>
+   <input type="checkbox" name="question5" id="option5" value="5"> f.	Network A -- LAN<br>
+   <br>
+    <button onclick="quest5()" class="button question5">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest5() 
+		{
+			var rad=document.getElementsByName('question5');
+			var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==3)
+				{
+					if (rad[1].checked && rad[2].checked && rad[5].checked) 
+					{
+						$('.button.question5').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[1].checked || rad[2].checked || rad[5].checked) 
+					{
+						if(rad[1].checked)
+						{
+							n=n+7;
+						}
+						if(rad[2].checked)
+						{
+							n=n+7;
+						}
+						if(rad[5].checked)
+						{
+							n=n+7;
+						}
+						$('.button.question5').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question4').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<button onclick="quest6()" class="button result">Результат</button><br>
+	<script>
+		function quest6() 
+		{
+			alert('Результат тест Технологія Комунікація в мережі 2 варіант= '+n+' %')
+		}
+	</script>
+</div>
+
+<div class="Footer">
+Copiright &copy; <a href="div-verstka.html">Головна сторінка</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
