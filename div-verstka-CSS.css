@@ -1,0 +1,135 @@
+.Body
+{
+	border: 1px solid #ff0000;
+	width: auto;
+	height: auto;
+	background: -o-linear-gradient(#0000ff, #00fff);/*Робими залівку градієнтом*/
+	background: -webkit-linear-gradient(#000000, #ff0000);
+	color: #00аа00;
+	overflow: auto;
+	font-family: serif;
+	font-size: 25px;
+}
+.Main-Frame
+{
+	/*border: 1px solid #ff0000;*/
+	width: 900px;
+	margin: 10px auto 10px; /*зверху зліва/зправа знизу*/
+	border-radius: 2px;
+	background: rgba(0,0,0,.1);
+}
+.Header
+{
+	/*border: 1px solid #0000ff;*/
+	color: #ff0000;
+	text-align: center;/*Властивість, яка вирівнює текст поцентру, зліва, зправа*/
+	font-size: 40px;
+	font-family: cursive, fantasy;
+	border-radius: 2px;
+	background: rgba(0,0,0,.2);
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+}
+.Left-menu
+{
+	/*border: 1px solid #0ff0f0;*/
+	width: 150px;
+	height: auto;
+	color: #00ff00;
+	float: left;/*Властвість яка задає розмішення наступного блоку*/
+	overflow: hidden;/*Властивість яка задає розміщення елементів*/
+	padding: 5px;/*Властвість, яка задає відступ всередині блоку*/
+	border-radius: 2px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+}
+.Work-Area
+{
+	/*border: 1px solid #80f155;*/
+	overflow: hidden;
+	color: #00ff00;
+	padding: 5px;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 2px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+}
+.Footer
+{
+	/*border: 1px solid gold;*/
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	color: #000000;
+	font-size: 16px;
+}
+.button
+{
+	width: 150px;
+	height: 30px;
+	background: -o-linear-gradient(#0f0f00, #ffffff);/*Робими залівку градієнтом*/
+	background: -webkit-linear-gradient(#0f0f00, #ffffff);
+	border-radius: 5px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	color: #005f00;
+	padding: 5px;
+}
+.squa
+{
+	width: 400px;
+	height: 30px;
+	border: 1px solid #fff;
+	background: #00f;
+	border-radius: 5px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	padding: 1px;
+	overflow: hidden;
+	margin: 1px auto 1px; /*зверху зліва/зправа знизу*/
+}
+.bar
+{
+	width: 800px;
+	height: 30px;
+	color: #ff0;
+	background: repeating-linear-gradient(45deg, rgba(0,0,255,.9) 0, rgba(255,255,255,.9) 5px, transparent 7px, transparent 10px);
+	animation: slide 5s linear infinite;
+}
+@keyframes slide
+{
+	0%{ margin-left: 0;}
+	100%{ margin-left: -100%;}
+	
+}
+img
+{
+	float: none;
+	margin-right: 10px;
+	border-radius: 10px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+}
+.menu
+{
+	/*border: 1px solid #ff0000;*/
+	color: #00ff00;
+	padding: 1px;
+	margin: 1px;
+	text-decoration: none; /*text-decoratin - властивість яка задає простий, підкреслений, зачеркнутий, текст*/
+}
+.menu:hover
+{
+	color: #ffff00;
+	background: rgba(0,0,0,.2);
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+} 
+.PDF
+{
+	/*border: 1px solid #ff0000;*/
+	padding: 1px;
+	margin: 1px;
+	text-decoration: none; /*text-decoratin - властивість яка задає простий, підкреслений, зачеркнутий, текст*/
+	color: #00ff00;
+}
+.PDF:hover
+{
+	background: rgba(0,0,0,.2);
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	color: #00ff00;
+}
