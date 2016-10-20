@@ -1,0 +1,263 @@
+<DOCTYPE html>
+<html>
+
+<head>
+
+<title> Тест Технологія Ethernet. Варіант 1 </title>
+
+<meta name="keyword" content="div verstka">
+<meta name="description" content="My first div verstka">
+<meta charset="UTF-8">
+<link href="div-verstka-CSS.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"> </script>
+
+</head>
+
+<body>
+
+<div class="Body">
+
+<div class="Main-Frame">
+
+<div class="Header">
+<p>Тест Технологія Ethernet. Варіант 1 </p>
+</div>
+
+<div class="Left-menu">
+<a class="menu" href="Start.html"> #Лекції# </a><br><br>
+<a class="menu" href="allTests.html"> #Тести# </a><br><br>
+<a class="menu" href="labWork.html"> #Лабараторні# </a><br>
+</div>
+
+<div class="Work-Area">
+<b>1. На рисунку зображено таку топологію (1 відповідь):</b><br>
+	<br>
+	<img src="img\TETV2Q1.png" alt="PDF" height="150"><br>
+	<br>
+   <input type="radio" name="question1" value="1" > a. Фізична шина, логічна шина<br>
+   <input type="radio" name="question1" value="2" > b. Фізична шина, логічна зірка<br>
+   <input type="radio" name="question1" value="3" > c. Фізична зірка, логічна шина<br>
+   <input type="radio" name="question1" value="4" > d. Фізична зірка, логічна зірка<br>
+    <button onclick="quest1()" class="button question1">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+	var n=0;
+		function quest1() 
+		{
+		$('quest1').attr('enabled');
+		var rad=document.getElementsByName('question1');
+				if (rad[0].checked) 
+				{
+					$('quest1').removeAttr('enabled');
+					$('.button.question1').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна '+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('quest1').removeAttr('enabled');
+					$('.button.question1').attr('disabled', 'disabled');
+				}
+				
+		}
+	</script>
+	</div></div>
+   <br>
+<p><b>2. Фрейм Ethernet має такі поля (вибрати правильну назву поля та його значення)(3 відповіді):</b></p><br>
+	<input type="checkbox" name="question2" id="option1" value="1"> a. Preamble – преамбула – з метою синхронізації<br>
+   <input type="checkbox" name="question2" id="option2" value="2"> b. DestinationAddress – ІР-адреса призначення?<br>
+   <input type="checkbox" name="question2" id="option3" value="3"> c. SourceAddress – МАС-адреса відправника<br>
+   <input type="checkbox" name="question2" id="option4" value="4"> d. Type – тип протоколунижнього рівня<br>
+   <input type="checkbox" name="question2" id="option5" value="5"> e. Data - дані<br>
+   <input type="checkbox" name="question2" id="option6" value="6"> f. FCS – контрольна сума пакету<br>
+    <button onclick="quest2()" class="button question2">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest2() 
+		{
+			var rad=document.getElementsByName('question2');
+			var counter=0;
+			console.log('button 2 work');
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==3)
+				{
+					if (rad[0].checked && rad[2].checked && rad[4].checked) 
+					{
+						$('.button.question2').attr('disabled', 'disabled');
+						i=i+20;
+						alert('Відповідь правильна '+i+'%');
+					}
+					else if(rad[0].checked || rad[2].checked || rad[4].checked)
+					{
+						if(rad[0].checked)
+						{
+						n=n+7;
+						}
+						if(rad[2].checked)
+						{
+						n=n+7;
+						}
+						if(rad[4].checked)
+						{
+						n=n+6;
+						}
+						alert('Відповідь правильна частково '+n+'%');
+						$('.button.question2').attr('disabled', 'disabled');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question2').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}	
+	</script>
+	</div></div>
+ <p><b>3. Який тут зображено тип кадру?</b></p><br>
+	<br>
+	<img src="img\TETV1Q3.png" alt="PDF" height="150"><br>
+	<br>
+   <input type="radio" name="question3" value="1"> a. Multicast<br>
+   <input type="radio" name="question3" value="2"> b. Monocast<br>
+   <input type="radio" name="question3" value="3"> c. Broadcast<br>
+   <input type="radio" name="question3" value="4"> d. Unicast<br>
+   <button onclick="quest3()" class="button question3'">Відповісти</button><br>
+   <script type="text/javascript">
+		function quest3() {
+		var rad=document.getElementsByName('question3');
+				if (rad[3].checked) 
+				{
+					n=n+20;
+					alert('Відповідь правильна '+n+'%');
+					$('.button.question3').attr('disabled', 'disabled');
+				}
+				else
+				{
+					alert('Відповід не правильна '+n+'%');
+					$('.button.question3').attr('disabled', 'disabled');
+				}
+		}
+	</script>
+   <br>
+	<div class= "squa"> <div class="bar">
+	</div></div>
+   <br>
+   <p><b>4. Скільки тут колізійних доменів (1 відповідь)?</b></p><br>
+	<br>
+	<img src="img\TETV1Q4.png" alt="PDF" height="200"><br>
+   <input type="radio" name="question4" value="1"> a. 11<br>
+   <input type="radio" name="question4" value="2"> b. 9<br>
+   <input type="radio" name="question4" value="3"> c. 5<br>
+   <input type="radio" name="question4" value="4"> d. 16<br>
+   <input type="radio" name="question4" value="5"> e. 6<br>
+   <button onclick="quest4()" class="button question4">Відповісти</button><br>
+   <br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest4() {
+		var rad=document.getElementsByName('question4');
+				if (rad[1].checked) 
+				{
+					$('.button.question4').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна '+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна');
+					$('.button.question4').attr('disabled', 'disabled');
+				}
+		}
+	</script></div></div>
+	<br>
+   <p><b>5.Базові операції LAN Свіча є такими (2 відповіді):</b></p><br>
+	<input type="checkbox" name="question5" id="option1" value="1"> a. Освіта<br>
+   <input type="checkbox" name="question5" id="option2" value="2"> b. Смерть інформації<br>
+   <input type="checkbox" name="question5" id="option3" value="3"> c. Flooding<br>
+   <input type="checkbox" name="question5" id="option4" value="4"> d. Вибіркова передача<br>
+   <input type="checkbox" name="question5" id="option5" value="5"> e. Передача трафіку<br>
+   <button onclick="quest5()" class="button question5">Відповісти</button><br>
+   <br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest5() {
+		var rad=document.getElementsByName('question5');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[0].checked &&rad[1].checked) 
+					{
+					
+						n=n+20;
+						alert('Відповідь правильна'+n+ '%');
+						$('.button.question5').attr('disabled', 'disabled');
+					}
+					else if(rad[0].checked || rad[1].checked)
+					{
+						if(rad[0].checked)
+						{
+						n=n+10;
+						}
+						if(rad[1].checked)
+						{
+						n=n+10;
+						}
+						alert('Відповідь правильна частково '+n+'%');
+						$('.button.question5').attr('disabled', 'disabled');
+					}
+					else
+					{
+						alert('Відповід не правильна'+n+'%');
+						$('.button.question5').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 2 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<button onclick="quest6()" class="button result">Результат</button><br>
+	<script>
+		function quest6() 
+		{
+			alert('Результат по тесту Технологія Ethernet 1 варіант = '+n+' %')
+		}
+	</script>
+</div>
+
+<div class="Footer">
+Copiright &copy; <a href="div-verstka.html">Головна сторінка</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
