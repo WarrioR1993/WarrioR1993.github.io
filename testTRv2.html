@@ -1,0 +1,294 @@
+<DOCTYPE html>
+<html>
+
+<head>
+
+<title> Технологія Token Ring. Варіант 2</title>
+
+<meta name="keyword" content="div verstka">
+<meta name="description" content="My first div verstka">
+<meta charset="UTF-8">
+<link href="div-verstka-CSS.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"> </script>
+
+</head>
+
+<body>
+
+<div class="Body">
+
+<div class="Main-Frame">
+
+<div class="Header">
+<p>Технологія Token Ring. Варіант 2</p>
+</div>
+
+<div class="Left-menu">
+<a class="menu" href="Start.html"> #Лекції# </a><br><br>
+<a class="menu" href="allTests.html"> #Тести# </a><br><br>
+<a class="menu" href="labWork.html"> #Лабараторні# </a><br>
+</div>
+
+<div class="Work-Area">
+<b>1. Як у мережі Token Ring визначена процедуриа контролю роботи мережі:</b><br>
+	<br>
+   <input type="radio" name="question1" value="0" > a. посланий кадр завжди повертається в станцію – відправник<br>
+   <input type="radio" name="question1" value="1" > b. посланий кадр завжди дістається станції – отримувача<br>
+   <input type="radio" name="question1" value="2" > c. посланий пакет завжди повертається в станцію – відправник<br>
+   <input type="radio" name="question1" value="3" > d. згублений кадр завжди повертається в станцію - відправник<br>
+   
+    <button onclick="quest1()" class="button question1">Відповісти</button><br>
+	<div class= "squa"> 
+	<div class="bar">
+	<script type="text/javascript">
+	var n=0;
+		function quest1() {
+		var rad=document.getElementsByName('question1');
+				if (rad[0].checked) 
+				{
+					$('.button.question1').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('.button.question1').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script>
+	</div>
+	</div>
+   <br>
+<b>2. Станції мережі починають процедуру вибору нового активного монітора, якщо кадр присутності активного монітора не з'являється в мережі:</b><br>
+	<br>
+   <input type="radio" name="question2" value="0" > a. Через  4 секунди<br>
+   <input type="radio" name="question2" value="1" > b. Через  7 секунд<br>
+   <input type="radio" name="question2" value="2" > c. Через  3 секунди<br>
+   <input type="radio" name="question2" value="3" > d. Через  10 мс<br>
+   
+    <button onclick="quest2()" class="button question2">Відповісти</button><br>
+	<div class= "squa"> 
+	<div class="bar">
+	<script type="text/javascript">
+		function quest2() {
+		$('quest2').attr('enabled');
+		var rad=document.getElementsByName('question2');
+				if (rad[1].checked) 
+				{
+					$('.button.question2').attr('disabled', 'disabled');
+					n=n+20;
+					alert('Відповідь правильна'+n+'%');
+				}
+				else
+				{
+					alert('Відповід не правильна'+n+'%');
+					$('.button.question2').attr('disabled', 'disabled');
+				}
+		}
+		
+	</script>
+	<p class="procent">0%</p>
+	</div></div>
+ <p><b>3. Час володіння поділюваним середовищем у мережі Token Ring – це ...(2 відповіді):</b></p><br>
+	<br>
+	<input type="checkbox" name="question3" id="option1" value="0"> a. token holding time<br>
+   <input type="checkbox" name="question3" id="option2" value="1"> b. token time<br>
+   <input type="checkbox" name="question3" id="option3" value="2"> c. дорівнює 10 мс<br>
+   <input type="checkbox" name="question3" id="option4" value="3"> d. дорівнює 4 секунди<br>
+   <input type="checkbox" name="question3" id="option4" value="4"> e. дорівнює 7 секунд<br>
+   <input type="checkbox" name="question3" id="option4" value="5"> f.	дорівнює 10 мс<br>
+    <button onclick="quest3()" class="button question3">Відповісти</button><br>
+	<br>
+	<div class= "squa"> 
+	<div class="bar">
+	<script type="text/javascript">
+		function quest3() {
+		var rad=document.getElementsByName('question3');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[0].checked && rad[5].checked) 
+					{
+						$('.button.question3').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[0].checked || rad[5].checked) 
+					{
+						if(rad[0].checked)
+						{
+							n=n+10;
+						}
+						if(rad[5].checked)
+						{
+							n=n+10;
+						}
+						$('.button.question3').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна '+n+'%');
+						$('.button.question1').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+   <br>
+   <p><b>4.	Обрати 2 відповіді, які стосуються наявності у мережі маркера:</b></p><br>
+   <br>
+	<input type="checkbox" name="question4" id="option1" value="0"> a. За його наявність відповідає активний монітор <br>
+   <input type="checkbox" name="question4" id="option2" value="1"> b. За його наявність відповідає мережевий адаптер <br>
+   <input type="checkbox" name="question4" id="option3" value="2"> c. Якщо активний монітор не одержує маркер протягом 2,6 с, то він породжує новий маркер<br>
+   <input type="checkbox" name="question4" id="option4" value="3"> d. Якщо активний монітор не одержує маркер протягом 4 с, то він видаляє маркер<br>
+   <input type="checkbox" name="question4" id="option4" value="4"> e. Якщо активний монітор не одержує маркер протягом 7 с, то він породжує новий маркер<br>
+   
+    <button onclick="quest4()" class="button question4">Відповісти</button><br>
+	<br>
+	<div class= "squa"> <div class="bar">
+	<script type="text/javascript">
+		function quest4() {
+		var rad=document.getElementsByName('question4');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==2)
+				{
+					if (rad[2].checked && rad[0].checked) 
+					{
+						$('.button.question4').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[0].checked || rad[2].checked) 
+					{
+						if(rad[0].checked)
+						{
+							n=n+10;
+						}
+						if(rad[2].checked)
+						{
+							n=n+10;
+						}
+						$('.button.question4').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+					else
+					{
+						alert('Відповід не правильна '+n+'%');
+						$('.button.question4').attr('disabled', 'disabled');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<b>5. Обрати 4 відповіді, що стосуються мереж FDDI:</b></p><br>
+	<br>
+	<input type="checkbox" name="question5" id="option1" value="0"> a. бітова швидкість передачі даних до 10 Мбіт/с <br>
+   <input type="checkbox" name="question5" id="option2" value="1"> b. будується на основі трьох оптоволоконних кілець, що утворять основний і резервний шляхи передачі даних між вузлами мережі<br>
+   <input type="checkbox" name="question5" id="option3" value="2"> c. перешкодостійкість мережі є високою<br>
+   <input type="checkbox" name="question5" id="option4" value="3"> d. використовує метод пізнього вивільнення маркеру<br>
+   <input type="checkbox" name="question5" id="option4" value="4"> e. розрізняє синхронний та асинхронний типи трафіку<br>
+   <input type="checkbox" name="question5" id="option4" value="5"> f. максимально ефективно використовує потенційну пропускну здатність мережі<br>
+   <input type="checkbox" name="question5" id="option4" value="6"> g. використовує метод раннього вивільнення маркеру<br>
+    <button onclick="quest5()" class="button question5">Відповісти</button><br>
+	<br>
+	<div class= "squa"> 
+	<div class="bar">
+	<script type="text/javascript">
+		function quest5() {
+		var rad=document.getElementsByName('question5');
+		var counter=0;
+				for (var i=0;i<rad.length; i++) 
+				{
+					if (rad[i].checked) 
+					{
+						counter++;
+					}
+				}
+				if(counter==4)
+				{
+					if (rad[2].checked && rad[4].checked && rad[5].checked && rad[6].checked) 
+					{
+						$('.button.question5').attr('disabled', 'disabled');
+						n=n+20;
+						alert('Відповідь правильна'+n+'%');
+					}
+					else if (rad[2].checked || rad[4].checked || rad[5].checked || rad[6].checked) 
+					{
+						if(rad[2].checked)
+						{
+							n=n+5;
+						}
+						if(rad[4].checked)
+						{
+							n=n+5;
+						}
+						if(rad[5].checked)
+						{
+							n=n+5;
+						}
+						if(rad[6].checked)
+						{
+							n=n+5;
+						}
+						$('.button.question5').attr('disabled', 'disabled');
+						alert('Відповідь правильна частково'+n+'%');
+					}
+				}
+				else
+				{
+					alert('Хороша спроба))) але правильних відповідей всього 3 )))');
+				}
+				
+		}
+		
+	</script></div></div>
+	<br>
+	<button onclick="quest6()" class="button result">Результат</button><br>
+	<script>
+		function quest6() 
+		{
+			alert('Результат тест Технологія Token Ring 2 варіант= '+n+' %')
+		}
+	</script>
+	<br>
+</div>
+
+<div class="Footer">
+Copiright &copy; <a href="div-verstka.html">Головна сторінка</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
